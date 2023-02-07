@@ -41,7 +41,7 @@ module.exports = {
   // }
   
   sockets: {
-    onlyAllowOrigins: ["*"]
+    onlyAllowOrigins: ["http://","https://"]
   }
 
 };
