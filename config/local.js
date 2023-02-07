@@ -37,8 +37,8 @@ module.exports = {
   auth: {
     // Provide a set of credentials that can be used to access the admin interface.
     static: {
-      username: 'STATIC_USERNAME',
-      password: 'STATIC_PASSWORD'
+      username: ${STATIC_USERNAME},
+      password: ${STATIC_PASSWORD}
     },
     // You can also specify an ldap connection that can be used for authentication.
     //ldap: {
@@ -56,7 +56,7 @@ module.exports = {
   jwt: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    token_secret: 'INSERT_RANDOM_TOKEN_KEY'
+    token_secret: ${RANDOM_TOKEN_KEY}
   },
 
   models: {
@@ -79,34 +79,35 @@ module.exports = {
       // DEKs should be 32 bytes long, and cryptographically random.
       // You can generate such a key by running the following:
       //   require('crypto').randomBytes(32).toString('base64')
-      default: 'DATA_ENCRYPTION_KEY'
+      default: ${DATA_ENCRYPTION_KEY}
     },
   },
 
   datastores: {
     postgresql: {
       adapter: 'sails-postgresql',
-      host: $DATABASE_HOST,
-      user: $DATABASE_USERNAME,
-      password: $DATABASE_PASSWORD,
-      database: $MAIN_DATABASE_NAME
+      host: ${DATABASE_HOST},
+      user: ${DATABASE_USERNAME},
+      password: ${DATABASE_PASSWORD},
+      database: ${MAIN_DATABASE_NAME}
     }
   },
 
   session: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    secret: $SESSION_SECRET,
-    database: $SESSION_DATABASE_NAME,
-    host: $DATABASE_HOST,
-    user: $DATABASE_USERNAME,
-    password: $DATABASE_PASSWORD,
+    secret: ${SESSION_SECRET},
+    database: ${SESSION_DATABASE_NAME},
+    host: ${DATABASE_HOST},
+    user: ${DATABASE_USERNAME},
+    password: ${DATABASE_PASSWORD},
     port: 5432
   },
 
   files: {
     // Folder must exist and user running the server must have adequate perms
-    dirname: 'PATH_FOR_ASSETS',
+    dirname: '/files/
+    ',
     // Maximum allowed file size in bytes
     // Defaults to 500MB
     // maxBytes: 524288000
