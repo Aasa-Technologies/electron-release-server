@@ -39,5 +39,9 @@ module.exports = {
   // auth: {
   //   secret: 'temppass'
   // }
+  
+  sockets: {
+    onlyAllowOrigins: ["*"]
+  }
 
 };
