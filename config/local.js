@@ -86,21 +86,21 @@ module.exports = {
   datastores: {
     postgresql: {
       adapter: 'sails-postgresql',
-      host: 'DATABASE_HOST',
-      user: 'DATABASE_USERNAME',
-      password: 'DATABASE_PASSWORD',
-      database: 'MAIN_DATABASE_NAME'
+      host: $DATABASE_HOST,
+      user: $DATABASE_USERNAME,
+      password: $DATABASE_PASSWORD,
+      database: $MAIN_DATABASE_NAME
     }
   },
 
   session: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    secret: 'SESSION_SECRET',
-    database: 'SESSION_DATABASE_NAME',
-    host: 'DATABASE_HOST',
-    user: 'DATABASE_USERNAME',
-    password: 'DATABASE_PASSWORD',
+    secret: $SESSION_SECRET,
+    database: $SESSION_DATABASE_NAME,
+    host: $DATABASE_HOST,
+    user: $DATABASE_USERNAME,
+    password: $DATABASE_PASSWORD,
     port: 5432
   },
 
