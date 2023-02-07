@@ -37,8 +37,8 @@ module.exports = {
   auth: {
     // Provide a set of credentials that can be used to access the admin interface.
     static: {
-      username: STATIC_USERNAME,
-      password: STATIC_PASSWORD
+      username: process.env.STATIC_USERNAME,
+      password: process.env.STATIC_PASSWORD
     },
     // You can also specify an ldap connection that can be used for authentication.
     //ldap: {
