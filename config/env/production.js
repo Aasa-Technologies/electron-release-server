@@ -40,8 +40,5 @@ module.exports = {
   //   secret: 'temppass'
   // }
   
-  sockets: {
-    onlyAllowOrigins: ["http://","https://"]
-  }
 
 };
