@@ -21,6 +21,8 @@ module.exports = {
     datastore: 'postgresql',
     migrate: 'safe'
   },
+  
+  hookTimeout: 40000,
 
   /***************************************************************************
    * Set the port in the production environment to 80                        *
