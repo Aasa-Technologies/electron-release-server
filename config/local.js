@@ -56,7 +56,7 @@ module.exports = {
   jwt: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    token_secret: RANDOM_TOKEN_KEY
+    token_secret: process.env.RANDOM_TOKEN_KEY
   },
 
   models: {
@@ -79,28 +79,28 @@ module.exports = {
       // DEKs should be 32 bytes long, and cryptographically random.
       // You can generate such a key by running the following:
       //   require('crypto').randomBytes(32).toString('base64')
-      default: DATA_ENCRYPTION_KEY
+      default: process.env.DATA_ENCRYPTION_KEY
     },
   },
 
   datastores: {
     postgresql: {
       adapter: 'sails-postgresql',
-      host: DATABASE_HOST,
-      user: DATABASE_USERNAME,
-      password: DATABASE_PASSWORD,
-      database: MAIN_DATABASE_NAME
+      host: process.env.DATABASE_HOST,
+      user: process.env.DATABASE_USERNAME,
+      password: process.env.DATABASE_PASSWORD,
+      database: process.env.MAIN_DATABASE_NAME
     }
   },
 
   session: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    secret: SESSION_SECRET,
-    database: SESSION_DATABASE_NAME,
-    host: DATABASE_HOST,
-    user: DATABASE_USERNAME,
-    password: DATABASE_PASSWORD,
+    secret: process.env.SESSION_SECRET,
+    database: process.env.SESSION_DATABASE_NAME,
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USERNAME,
+    password: process.env.DATABASE_PASSWORD,
     port: 5432
   },
 
