@@ -20,6 +20,6 @@ module.exports = {
   models: {
     datastore: 'postgresql'
   },
-  hookTimeout: 80000,
+  hookTimeout: 160000,
 
 };
