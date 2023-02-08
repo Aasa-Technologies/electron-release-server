@@ -21,5 +21,6 @@ module.exports = {
     datastore: 'postgresql'
   },
   hookTimeout: 160000,
+  port: 8080,
 
 };
