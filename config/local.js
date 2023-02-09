@@ -56,7 +56,7 @@ module.exports = {
   jwt: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    token_secret: process.env.RANDOM_TOKEN_KEY
+    token_secret: "ZTW2CzYZTsJolh1itTmr5BHj9E9ToB6i9DwyQrLYRJLjO2G2OJKAzE35xflDxZl"
   },
 
   models: {
@@ -79,7 +79,7 @@ module.exports = {
       // DEKs should be 32 bytes long, and cryptographically random.
       // You can generate such a key by running the following:
       //   require('crypto').randomBytes(32).toString('base64')
-      default: process.env.DATA_ENCRYPTION_KEY
+      default: "3Xw+1MYzkLluGokbjr7LTpzu1lBLtBf+QhiCrMdwYEqmOsOhUhWAz6u7jxVCHvK1"
     },
   },
 
