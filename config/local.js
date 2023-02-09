@@ -37,8 +37,8 @@ module.exports = {
   auth: {
     // Provide a set of credentials that can be used to access the admin interface.
     static: {
-      username: process.env.STATIC_USERNAME,
-      password: process.env.STATIC_PASSWORD
+      username: 'user',
+      password: '1234qwer'
     },
     // You can also specify an ldap connection that can be used for authentication.
     //ldap: {
@@ -86,21 +86,21 @@ module.exports = {
   datastores: {
     postgresql: {
       adapter: 'sails-postgresql',
-      host: process.env.DATABASE_HOST,
-      user: process.env.DATABASE_USERNAME,
-      password: process.env.DATABASE_PASSWORD,
-      database: process.env.MAIN_DATABASE_NAME
+      host: 'localhost',
+      user: 'releaseserver',
+      password: 'secret',
+      database: 'releaseserver'
     }
   },
 
   session: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    secret: process.env.SESSION_SECRET,
-    database: process.env.SESSION_DATABASE_NAME,
-    host: process.env.DATABASE_HOST,
-    user: process.env.DATABASE_USERNAME,
-    password: process.env.DATABASE_PASSWORD,
+    secret: 'l3SwQ814u6fZ2pj2F2sjY6sUfe83XFg4ReJzed3Ug8rC4eSGD4ZZfiNoIWx0sTf',
+    database: 'releaseserver',
+    host: 'localhost',
+    user: 'releaseserver',
+    password: 'secret',
     port: 5432
   },
 
