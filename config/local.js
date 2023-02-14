@@ -79,7 +79,7 @@ module.exports = {
       // DEKs should be 32 bytes long, and cryptographically random.
       // You can generate such a key by running the following:
       //   require('crypto').randomBytes(32).toString('base64')
-      default: "KoRXXNoQQYOcBR+tj9I/omY1s9qJdFK/IzGKSjZX/dM="
+      default: "Hr5yKwx9lFJK5UJJ3K6szTWw14GIjxNauWPSVorNY3k="
     },
   },
 
