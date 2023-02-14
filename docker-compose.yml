@@ -18,7 +18,7 @@ services:
       # You can generate such a key by running the following:
       #   require('crypto').randomBytes(32).toString('base64')
       # PLEASE ENSURE THAT YOU CHANGE THIS VALUE IN PRODUCTION
-      DATA_ENCRYPTION_KEY: "3Xw+1MYzkLluGokbjr7LTpzu1lBLtBf+QhiCrMdwYEqmOsOhUhWAz6u7jxVCHvK1"
+      DATA_ENCRYPTION_KEY: "KoRXXNoQQYOcBR+tj9I/omY1s9qJdFK/IzGKSjZX/dM="
       # Recommended: 63 random alpha-numeric characters
       # Generate using: https://www.grc.com/passwords.htm
       TOKEN_SECRET: "ZTW2CzYZTsJolh1itTmr5BHj9E9ToB6i9DwyQrLYRJLjO2G2OJKAzE35xflDxZl"
