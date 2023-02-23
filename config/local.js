@@ -32,13 +32,13 @@ module.exports = {
   // The full base url at which your site will be primarily available.
   // Include an http:// prefix
   // ex. 'http://my-site.com'
-  appUrl: 'SITE_URL',
+  appUrl: process.env.SITE_URL,
 
   auth: {
     // Provide a set of credentials that can be used to access the admin interface.
     static: {
-      username: 'user',
-      password: '1234qwer'
+      username: process.env.USERNAME,
+      password: process.env.PASSWORD
     },
     // You can also specify an ldap connection that can be used for authentication.
     //ldap: {
@@ -56,7 +56,7 @@ module.exports = {
   jwt: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    token_secret: "ZTW2CzYZTsJolh1itTmr5BHj9E9ToB6i9DwyQrLYRJLjO2G2OJKAzE35xflDxZl"
+    token_secret: process.env.JWT_TOKEN
   },
 
   models: {
@@ -79,29 +79,27 @@ module.exports = {
       // DEKs should be 32 bytes long, and cryptographically random.
       // You can generate such a key by running the following:
       //   require('crypto').randomBytes(32).toString('base64')
-      default: "Hr5yKwx9lFJK5UJJ3K6szTWw14GIjxNauWPSVorNY3k="
+      default: process.env.DEK
     },
   },
 
   datastores: {
     postgresql: {
       adapter: 'sails-postgresql',
-      host: 'localhost',
-      user: 'releaseserver',
-      password: 'secret',
-      database: 'releaseserver'
+      URL: process.env.DB_URL,
+      ssl: true
     }
   },
 
   session: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    secret: 'l3SwQ814u6fZ2pj2F2sjY6sUfe83XFg4ReJzed3Ug8rC4eSGD4ZZfiNoIWx0sTf',
-    database: 'releaseserver',
-    host: 'localhost',
-    user: 'releaseserver',
-    password: 'secret',
-    port: 5432
+    secret: process.env.SESSION_SECRET,
+    database: process.env.SESSION_DB,
+    host: process.env.SESSION_DB_HOST,
+    user: process.env.SESSION_DB_USER,
+    password: process.env.SESSION_DB_PASS,
+    port: process.env.SESSION_DB_PORT,
   },
 
   files: {
