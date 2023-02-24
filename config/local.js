@@ -104,7 +104,8 @@ module.exports = {
 
   files: {
     // Folder must exist and user running the server must have adequate perms
-    dirname: '/files/',
+//     dirname: '/files/',
+    dirname: './',
     // Maximum allowed file size in bytes
     // Defaults to 500MB
     // maxBytes: 524288000
