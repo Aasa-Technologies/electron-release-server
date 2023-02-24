@@ -4,5 +4,6 @@
   },
   "hooks": {
     "sockets": false
-  }
+  },
+  "sockets":false
 }
