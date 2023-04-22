@@ -2,9 +2,9 @@ doctype html
 html
   head
     meta(charset='utf-8')
-    title #{process.env.WEBSITE_TITLE || 'Awesome Electron Desktop App'}
+    title #{process.env.WEBSITE_TITLE || 'Proer App'}
     meta(name='description', content='Download the interactive app for doing whatever it does.')
-    meta(name='author', content='Arek Sredzki')
+    meta(name='author', content='Aasa Tech')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     base(href="/")
 
@@ -21,13 +21,9 @@ html
       .navbar.navbar-default(role='navigation')
         .container-fluid
           .navbar-header
-            a.pull-left(href='/')
-              img.navbar-logo(src=process.env.WEBSITE_NAV_LOGO || '/images/logo.svg')
-            a.navbar-brand(href='/') #{process.env.WEBSITE_APP_TITLE || 'Electron App'}
+            a.pull-left(href='/releases/stable/default')
+              img.navbar-logo(src=process.env.WEBSITE_NAV_LOGO || '/images/logo.png')
           .collapse.navbar-collapse
-            ul.nav.navbar-nav
-              li(ng-class="{ active: isActive('/')}")
-                a(href='/') Home
             ul.nav.navbar-nav
               li(ng-class="{ active: isActive('/releases')}")
                 a(href='/releases') Download
@@ -39,7 +35,7 @@ html
           i.fa.fa-fw.fa-code
           |  with
           i.fa.fa-fw.fa-heart
-          |  by Arek Sredzki
+          |  by Aasa Technologies
 
 
     // bower:js
