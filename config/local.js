@@ -32,13 +32,14 @@ module.exports = {
   // The full base url at which your site will be primarily available.
   // Include an http:// prefix
   // ex. 'http://my-site.com'
-  appUrl: process.env.SITE_URL,
+//   appUrl: process.env.SITE_URL,
+    appUrl: "https://updates.proer.io",
 
   auth: {
     // Provide a set of credentials that can be used to access the admin interface.
     static: {
-      username: process.env.USERNAME,
-      password: process.env.PASSWORD
+      username: 'proer',
+      password: '1234qwer'
     },
     // You can also specify an ldap connection that can be used for authentication.
     //ldap: {
@@ -56,7 +57,7 @@ module.exports = {
   jwt: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    token_secret: process.env.JWT_TOKEN
+    token_secret: 'ZTW2CzYZTsJolh1itTmr5BHj9E9ToB6i9DwyQrLYRJLjO2G2OJKAzE35xflDxZl'
   },
 
   models: {
@@ -79,37 +80,42 @@ module.exports = {
       // DEKs should be 32 bytes long, and cryptographically random.
       // You can generate such a key by running the following:
       //   require('crypto').randomBytes(32).toString('base64')
-      default: process.env.DEK
+      default: 'Hr5yKwx9lFJK5UJJ3K6szTWw14GIjxNauWPSVorNY3k='
     },
   },
 
   datastores: {
     postgresql: {
       adapter: 'sails-postgresql',
-      URL: process.env.DB_URL,
-      ssl: true
+    //   URL: process.env.DB_URL,
+    //   ssl: true
+      host: 'db-postgresql-blr1-33926-do-user-13403861-0.b.db.ondigitalocean.com',
+      user: 'doadmin',
+      password: 'AVNS_PpQqOb00iiSk7v1M6ck',
+      database: 'proer_release_production',
+      port: '25060'
     }
   },
 
   session: {
     // Recommended: 63 random alpha-numeric characters for secret
     // Generate using: https://www.grc.com/passwords.htm
-    secret: process.env.SESSION_SECRET,
-    database: process.env.SESSION_DB,
-    host: process.env.SESSION_DB_HOST,
-    user: process.env.SESSION_DB_USER,
-    password: process.env.SESSION_DB_PASS,
-    port: process.env.SESSION_DB_PORT,
+    secret: 'l3SwQ814u6fZ2pj2F2sjY6sUfe83XFg4ReJzed3Ug8rC4eSGD4ZZfiNoIWx0sTf',
+    database: 'proer_release_session',
+    host: 'db-postgresql-blr1-33926-do-user-13403861-0.b.db.ondigitalocean.com',
+    user: 'doadmin',
+    password: 'AVNS_PpQqOb00iiSk7v1M6ck',
+    port: '25060',
   },
 
   files: {
     // Folder must exist and user running the server must have adequate perms
-//     dirname: '/files/',
+    //dirname: './files/',
     dirname: './',
     // Maximum allowed file size in bytes
     // Defaults to 500MB
     // maxBytes: 524288000
-  }
+  },
 
   /***************************************************************************
    * Your SSL certificate and key, if you want to be able to serve HTTP      *
@@ -120,11 +126,11 @@ module.exports = {
    * `config/ssl` and dumped your certificate/key files there:               *
    ***************************************************************************/
 
-  // ssl: {
-  //   ca: require('fs').readFileSync(__dirname + './ssl/my_apps_ssl_gd_bundle.crt'),
-  //   key: require('fs').readFileSync(__dirname + './ssl/my_apps_ssl.key'),
-  //   cert: require('fs').readFileSync(__dirname + './ssl/my_apps_ssl.crt')
-  // },
+//   ssl: {
+//      ca: require('fs').readFileSync(__dirname + '/ssl/103.120.179.27.crt'),
+//      key: require('fs').readFileSync(__dirname + '/ssl/103.120.179.27.key'),
+//      cert: require('fs').readFileSync(__dirname + '/ssl/103.120.179.27.crt')
+//   },
 
   /***************************************************************************
    * The `port` setting determines which TCP port your app will be           *
@@ -142,7 +148,7 @@ module.exports = {
    * to 80 (http://) or 443 (https://) if you have an SSL certificate        *
    ***************************************************************************/
 
-  // port: process.env.PORT || 1337,
+   port: 4545,
 
   /***************************************************************************
    * The runtime "environment" of your Sails app is either typically         *
@@ -162,6 +168,6 @@ module.exports = {
    * 'development' environment.                                              *
    ***************************************************************************/
 
-  // environment: process.env.NODE_ENV || 'development'
+  environment: 'production'
 
 };
