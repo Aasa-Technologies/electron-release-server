@@ -88,7 +88,7 @@ module.exports = {
     postgresql: {
       adapter: 'sails-postgresql',
     //   URL: process.env.DB_URL,
-    //   ssl: true
+      ssl: true,
       host: 'db-postgresql-blr1-33926-do-user-13403861-0.b.db.ondigitalocean.com',
       user: 'doadmin',
       password: 'AVNS_PpQqOb00iiSk7v1M6ck',
