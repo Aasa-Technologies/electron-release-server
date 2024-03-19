@@ -11,23 +11,30 @@
  */
 
 module.exports = {
-
   /***************************************************************************
    * Set the default database connection for models in the production        *
    * environment (see config/datastores.js and config/models.js )            *
    ***************************************************************************/
 
   models: {
-    datastore: 'postgresql',
-    migrate: 'safe'
+    datastore: "postgresql",
+    migrate: "safe",
   },
+
+  hookTimeout: 400000,
 
   /***************************************************************************
    * Set the port in the production environment to 80                        *
    ***************************************************************************/
 
-  port: 5014,
+  port: 3000,
 
+  /* sails: {
+    config: {
+      appUrl: 'https://updates.proer.io/'
+    }
+  },
+  */
   /***************************************************************************
    * Set the log level in production environment to "silent"                 *
    ***************************************************************************/
@@ -39,5 +46,27 @@ module.exports = {
   // auth: {
   //   secret: 'temppass'
   // }
+  sockets: {
+    onlyAllowOrigins: [
+      "https://updates.proer.io",
+      "https://www.updates.proer.io",
+      "http://updates.proer.io",
+      "http://www.updates.proer.io",
+      "http://updates.proer.io:3000",
+      "http://www.updates.proer.io:3000",
+      "http://localhost",
+      "http://127.0.0.1",
+    ],
+    /*  beforeConnect: function(handshake, proceed) {
+    // your beforeConnect logic here
+    return proceed(null, true);
+  }
+*/
+  },
 
+  //   session: {
+  //     cookie: {
+  //       secure: true
+  //     }
+  //   }
 };
